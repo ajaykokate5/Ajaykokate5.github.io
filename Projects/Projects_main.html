@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1280, initial-scale=1">
+<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">      
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  height: 17.5cm;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+  height: 17cm;
+  width: 100%;
+  position: relative;
+	border: 1px solid blue;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+.image-class {
+  height: 200px;
+  width: 100%;
+}
+
+.view-btn {
+  margin:auto;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  background-color: #666;
+  color: white; 
+  bottom: 5px;
+  position: absolute;
+  left: 30%;
+}
+
+</style>
+</head>
+<body>
+<title>Project Portfolio</title>
+
+<!-- MAIN (Center website) -->
+<div class="main" >
+
+<h1>Ajay Kokate</h1>
+<hr>
+
+<h2>Project Portfolio</h2>
+
+<div id="myBtnContainer">
+
+  <button class="btn" onclick="filterSelection('datainsights')"> Data Insights</button>
+  <button class="btn" onclick="filterSelection('machinelearning')"> Machine Learning</button>
+  <button class="btn active" onclick="filterSelection('deeplearning')"> Deep Learning</button>
+  <button class="btn" onclick="filterSelection('all')"> Show all</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column datainsights">
+    <div class="content">
+      <img src="./images/health-insurance.jpg" alt="Mountains" class="image-class">
+      <h4>Health Insurance</h4>
+      <p class="card-text" align="justify">This project used Hypothesis Testing and Visualization to leverage customer's health information like smoking habits,
+        bmi, age, and gender for checking statistical evidence to make valuable decisions of insurance business like charges for health insurance.</p>
+      <br>                  
+      <b>Skills and Tools</b>
+      <p> Hypothesis Testing, Data visualisation, statistical Inference</p>
+      <a href="./1 Applied_stats_project.html" target="_blank" style="text-decoration: none;">
+        <button class="view-btn"> View Project</button>      
+      </a>           
+    </div>
+  </div>
+ 
+  
+  <div class="column machinelearning">
+    <div class="content">
+      <img src="./images/bank-loan.jpg" alt="machinelearning" class="image-class">
+      <h4>Identifying potential customers for loans</h4>
+      <p class="card-text" align="justify">Identified potential loan customers for Thera Bank using classification techniques. Compared models built with Logistic Regression 
+        and KNN algorithm in order to select the best performing one.</p>
+        <br>                      
+        <b>Skills and Tools</b>
+        <p>Logistic Regression, KNN, Classification</p>        
+        <a href="./2 Supervised_learning.html" target="_blank" style="text-decoration: none;">
+        <button class="view-btn"> View Project</button>      
+        </a>                 
+    </div>
+  </div>
+  <div class="column machinelearning">
+    <div class="content">
+    <img src="./images/bank-term.jpg" alt="machinelearning" class="image-class">
+      <h4>Predicting the term-deposit subscription</h4>
+      <p  class="card-text" align="justify">Leveraged customer information of bank marketing campaigns to predict whether a customer will subscribe to term deposit or not.
+        Different classification algorithms like Decision tree, Logistic Regression were used. 
+        Ensemble techniques like Random forest were used to further improve the classification results.
+        <br>
+        <br>
+      <b>Skills and Tools</b>
+     <p>Classification, Decision Trees, Ensemble Techniques</p>
+     <a href="./3 Ensemble_techniques.html" target="_blank" style="text-decoration: none;">
+      <button class="view-btn"> View Project</button>      
+      </a>  
+    </div>
+  </div>
+  <div class="column machinelearning">
+    <div class="content">
+    <img src="./images/silhouette.jpg" alt="machinelearning" class="image-class">
+      <h4>Classifying silhouettes of vehicles</h4>
+      <p  class="card-text" align="justify">Classified vehicles into different types based on silhouettes which may be viewed from many angles. 
+        Used PCA in order to reduce dimensionality and SVM for classification.  
+        <br>    
+        <br>      
+        <b>Skills and Tools</b>
+     <p> Support Vector Machines, Principal Component Analysis, Classification</p>
+     <a href="./4 PCA_project.html" target="_blank" style="text-decoration: none;">
+      <button class="view-btn"> View Project</button>      
+      </a>                  
+    </div>
+  </div>
+  <div class="column machinelearning">
+    <div class="content">
+    <img src="./images/concrete.jpg" alt="machinelearning" class="image-class">
+      <h4>Predicting the Strength of high performance concrete</h4>
+      <p  class="card-text" align="justify">This project involved feature exploration and selection to predict the strength of high-performance concrete. 
+        Used Regression models like Decision tree regressors to find out the most important features and predict the strength. 
+        Cross-validation techniques and Grid search were used to tune the parameters for best model performance.
+        <br>
+        <br>
+        <b>Skills and Tools</b>
+     <p>Regression, Decision trees, feature engineering</p>
+     <a href="./5 FMT.html" target="_blank" style="text-decoration: none;">
+      <button class="view-btn"> View Project</button>      
+      </a>                   
+    </div>
+  </div>
+  <div class="column machinelearning">
+    <div class="content">
+    <img src="./images/recommendation.png" alt="machinelearning" class="image-class">
+      <h4>Product Recommendation Systems</h4>
+      <p  class="card-text" align="justify">This project involved building recommendation systems for Amazon products. 
+        A popularity-based model and a collaborative Filtering model were used and evaluated to recommend top-10 products for a user.
+        <br>
+        <br>
+        <b>Skills and Tools</b>
+     <p>Collaborative Filtering, Recommender Systems, Python</p>
+     <a href="./6 recommendation_systems.html" target="_blank" style="text-decoration: none;">
+      <button class="view-btn"> View Project</button>      
+      </a>                
+    </div>
+  </div>
+
+
+  <div class="column deeplearning">
+    <div class="content">
+      <img src="./images/Ticketmanagement.jpg" alt="deeplearning" class="image-class">
+      <h4>Automatic Ticket Assignment</h4>
+      <p class="card-text"  align="justify">The goal of this hands-on project is to analyse the incident ticket generated in an IT organization and assign it to the concerned team using
+        Natural Language Processing and Deep Neural Network Classification techniques. This project also features baby-sitting of Neural Network to increase the performance. 
+        <br>
+        <b>Skills and Tools</b>
+     <p>  Data cleaning and preprocessing, Regular expressions, Stemming & Lemmatization, Data Visualization using Plotly, N-Gram analysis, 
+       Resampling techniques, Classification using Machine learning and Deep Neural Networks such as ANN, RNN, LSTM, CNN. </p>
+       <a href="./12_Merged_Project.html" target="_blank" style="text-decoration: none;">
+        <button class="view-btn"> View Project</button>      
+        </a> 
+    </div>
+  </div>
+
+
+  <div class="column deeplearning">
+    <div class="content">
+      <img src="./images/image-classification-svhn.png" alt="deeplearning" class="image-class">
+      <h4>Image classification neural network to classify Street House View Numbers</h4>
+      <p  class="card-text" align="justify">SVHN is a real-world image dataset for developing object recognition algorithms with a requirement on data 
+        formatting but comes from a significantly harder, unsolved, real-world problem (recognizing digits and numbers in natural scene images). 
+        SVHN is obtained from house numbers in Google Street View images. The project features a simple image 
+        classification pipeline based on the k-Nearest Neighbour and a deep neural network.
+        <br>
+        <b>Skills and Tools</b>
+     <p>  Neural Networks, Deep Learning, Keras, Image Recognition</p>
+     <a href="./7 Nural_Nets_project.html" target="_blank" style="text-decoration: none;">
+      <button class="view-btn"> View Project</button>      
+      </a>  
+    </div>
+  </div>
+  <div class="column deeplearning">
+    <div class="content">
+      <img src="./images/face detection.png" alt="deeplearning" class="image-class">
+      <h4>Face Detection</h4>
+      <p  class="card-text" align="justify">Recognize, identify and classify faces within images using CNN and image recognition algorithms. In this hands-on project, 
+        the goal is to build a face recognition system, which includes building a face detector
+        to locate the position of a face in an image and a face identification model to recognize whose face it is by matching it to the existing database of faces.
+        <br>
+        <br>
+        <b>Skills and Tools</b>
+        <p>Computer Vision, CNN, Transfer Learning, Object detection</p>    
+      <a href="./8 Face_detection.html" target="_blank" style="text-decoration: none;">
+        <button class="view-btn"> View Project</button>      
+        </a>      
+    </div>
+  </div>
+  <div class="column deeplearning">
+    <div class="content">
+      <img src="./images/Facial-Recognition.jpg" alt="deeplearning" class="image-class">
+      <h4>Face Recognition</h4>
+      <p class="card-text"  align="justify">Face recognition deals with Computer Vision a discipline of Artificial Intelligence and uses techniques 
+        of image processing and deep learning. The objective of this project is to build a face recognition system, which includes 
+        building a face detector to locate the position of a face in an image and a face identification model to recognize whose face it is by matching
+         it to the existing database of faces.
+        <br>
+        <br>
+        <b>Skills and Tools</b>
+     <p>  Computer Vision, Keras, CNN, Siamese Networks, Triplet loss</p>
+     <a href="./9 Face_recognition.html" target="_blank" style="text-decoration: none;">
+      <button class="view-btn"> View Project</button>      
+      </a>  
+    </div>
+  </div>
+  <div class="column deeplearning">
+    <div class="content">
+      <img src="./images/sentiment.jpg" alt="deeplearning" class="image-class">
+      <h4>Sentiment Analysis</h4>
+      <p  class="card-text" align="justify">The objective of this project is to build a text classification model that analyses the customer's sentiments 
+        based on their reviews in the IMDB database. The model uses a complex deep 
+        learning model to build an embedding layer followed by a classification algorithm to analyze the sentiment of the customers.
+        <br>
+        <br>
+        <b>Skills and Tools</b>
+     <p>  RNN Word embedding LSTM Classification</p>
+     <a href="./10 Sentiment Analysis.html" target="_blank" style="text-decoration: none;">
+      <button class="view-btn"> View Project</button>      
+      </a> 
+    </div>
+  </div>
+  <div class="column deeplearning">
+    <div class="content">
+      <img src="./images/sarcasm.jpeg" alt="deeplearning" class="image-class">
+      <h4>Sarcasm Detection</h4>
+      <p  class="card-text" align="justify">The goal of this hands-on project is to analyse the headlines of the articles from news sources and detect whether they are sarcastic or not.
+        <br>
+        <br>
+        <b>Skills and Tools</b>
+     <p>  GloVe, Classication, LSTM</p>
+     <a href="./11 Sarcasm Detection.html" target="_blank" style="text-decoration: none;">
+      <button class="view-btn"> View Project</button>      
+      </a> 
+    </div>
+  </div>
+
+
+
+
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("deeplearning")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+
+var siteWidth = 1280;
+var scale = window.outerWidth /siteWidth
+
+document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+         
+
+</script>
+</body>
+</html>
